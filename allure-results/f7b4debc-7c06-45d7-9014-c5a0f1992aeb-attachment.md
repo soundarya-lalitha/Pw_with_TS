@@ -1,0 +1,69 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e5]:
+      - link "UltimateQA" [ref=e7] [cursor=pointer]:
+        - /url: /collections
+        - heading "UltimateQA" [level=1] [ref=e8]
+      - navigation [ref=e9]:
+        - list [ref=e10]:
+          - listitem [ref=e11]:
+            - link "Sign In" [ref=e12] [cursor=pointer]:
+              - /url: /users/sign_in
+  - main [ref=e13]:
+    - generic [ref=e15]:
+      - article [ref=e16]:
+        - heading "Welcome!" [level=2] [ref=e17]
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20]: Email
+            - textbox "Email" [ref=e21]: soundarya.lalithac@gmail.com
+          - generic [ref=e22]:
+            - generic [ref=e23]: Password
+            - textbox "Password" [active] [ref=e24]: Paswrd@123#
+          - generic [ref=e25]:
+            - checkbox "Remember me" [checked] [ref=e26]
+            - generic [ref=e27]: Remember me
+            - link "Forgot password?" [ref=e28] [cursor=pointer]:
+              - /url: /users/password/new
+          - generic [ref=e29]:
+            - generic [ref=e30]: If you are a human, ignore this field
+            - textbox [ref=e31]
+          - generic [ref=e32]:
+            - iframe [ref=e35]:
+              - generic [ref=f4e6]:
+                - text: protected by
+                - strong [ref=f4e7]: reCAPTCHA
+            - button "Sign in" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - heading "Or sign in with" [level=2] [ref=e38]:
+            - generic [ref=e39]: Or sign in with
+          - list [ref=e40]:
+            - listitem [ref=e41]:
+              - link "linkedin" [ref=e42] [cursor=pointer]:
+                - /url: https://courses.thinkific.com/users/auth/linkedin?ss%5Breferral%5D=&ss%5Buser_return_to%5D=&ss%5Bvisitor_id%5D=3989778569
+                - generic [ref=e43]: 
+            - listitem [ref=e44]:
+              - link "facebook" [ref=e45] [cursor=pointer]:
+                - /url: https://courses.thinkific.com/users/auth/facebook?ss%5Breferral%5D=&ss%5Buser_return_to%5D=&ss%5Bvisitor_id%5D=3989778569
+                - generic [ref=e46]: 
+            - listitem [ref=e47]:
+              - link "google" [ref=e48] [cursor=pointer]:
+                - /url: https://courses.thinkific.com/users/auth/google?ss%5Breferral%5D=&ss%5Buser_return_to%5D=&ss%5Bvisitor_id%5D=3989778569
+                - generic [ref=e49]: 
+      - complementary [ref=e50]:
+        - link "Create a new account" [ref=e51] [cursor=pointer]:
+          - /url: /users/sign_up
+  - contentinfo [ref=e52]:
+    - article [ref=e54]:
+      - generic [ref=e56]:
+        - generic [ref=e57]: © Copyright UltimateQA 2026
+        - link "Teach online with Thinkific Open in a new window" [ref=e59] [cursor=pointer]:
+          - /url: //www.thinkific.com/?utm_source=qa-academy&utm_medium=powered-by&utm_campaign=Referral
+          - img "Teach online with Thinkific" [ref=e60]
+          - generic [ref=e76]: Open in a new window
+```

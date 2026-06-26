@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "Icon for courses.ultimateqa.com" [ref=e5]
+        - heading "courses.ultimateqa.com" [level=1] [ref=e6]
+      - heading "Performing security verification" [level=2] [ref=e7]
+      - paragraph [ref=e8]: This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
+      - alert [ref=e12]:
+        - generic [ref=e13]:
+          - heading "Why is this verification taking longer?" [level=2] [ref=e14]
+          - paragraph [ref=e15]: This verification can take longer due to an older computer or a slow internet connection.
+          - paragraph [ref=e16]: "What to do next:"
+          - list [ref=e17]:
+            - listitem [ref=e18]: Wait briefly. Refreshing the page will restart the security verification and may take longer.
+            - listitem [ref=e19]:
+              - text: If the verification still does not complete,
+              - link "refresh this page" [ref=e20] [cursor=pointer]:
+                - /url: "#"
+              - text: .
+            - listitem [ref=e21]:
+              - text: If you are still stuck on this page after a page refresh, refer to Cloudflare’s
+              - link "troubleshooting documentation" [ref=e22] [cursor=pointer]:
+                - /url: /cdn-cgi/challenge-platform/help
+              - text: for more help.
+  - contentinfo [ref=e23]:
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - text: "Ray ID:"
+        - code [ref=e28]: a11c18406d19179f
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - text: Performance and Security by
+          - link "Cloudflare" [ref=e31] [cursor=pointer]:
+            - /url: https://www.cloudflare.com?utm_source=challenge&utm_campaign=m
+        - link "Privacy" [ref=e33] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/privacypolicy/
+```

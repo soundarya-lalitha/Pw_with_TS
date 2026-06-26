@@ -1,0 +1,7 @@
+<textarea id="input" autocomplete="off" part="searchbox-input" spellcheck="false" role="combobox" aria-controls="matches" aria-live="polite" aria-expanded="false" aria-description="" placeholder="Ask Google"></textarea>
+
+<h3 class="LC20lb MBeuO DKV0Md" id="_Aig6aq72Cevj4-EPo7qygQ0_44">Playwright: Fast and reliable end-to-end testing for modern ...</h3>
+
+<a class="getStarted_Sjon" href="/docs/intro">Get started</a>
+
+<span title="Trace viewer" class="linkLabel_WmDU">Trace viewer</span>
