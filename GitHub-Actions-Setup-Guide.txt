@@ -1,0 +1,145 @@
+GitHub Actions Setup Guide for Playwright CI
+==========================================
+
+Project: Playwright Automation Suite
+
+This document explains how to set up GitHub Actions for a Playwright-based automation repository and how the workflow was configured during this session.
+
+1. What was created
+-------------------
+- A GitHub Actions workflow file at .github/workflows/playwright.yml
+- A CI-friendly Playwright config in playwright.config.js
+- A repository README in README.md
+- A local Git repository initialized and committed for GitHub upload
+
+2. GitHub Actions workflow overview
+-----------------------------------
+The workflow runs automatically when code is pushed or a pull request is created on main or master. It also supports manual runs using workflow_dispatch.
+
+Workflow steps:
+1. Checkout the repository
+2. Set up Node.js 20
+3. Install dependencies with npm ci
+4. Install Chromium for Playwright
+5. Run the Playwright tests in CI mode
+6. Upload the report and test-results artifacts
+
+3. Sample workflow file used in this session
+-------------------------------------------
+name: Playwright Tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --project=qa-chrome
+
+4. Commands used in this session
+--------------------------------
+npm ci
+npx playwright install --with-deps chromium
+npx playwright test --project=qa-chrome
+git init
+git add .
+git commit -m "Add Playwright tests and GitHub Actions workflow"
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+
+https://github.com/soundarya-lalitha/PlayWrightPOC_JS.git
+
+git push -u origin main
+
+5. How to push the repo to GitHub
+---------------------------------
+1. Create a new repository on GitHub.
+2. Add the remote URL and push your code.
+3. Open the Actions tab in GitHub.
+4. Confirm the workflow starts and completes.
+
+6. CI improvements and best practices
+-------------------------------------
+- Use GitHub Secrets for credentials and environment values.
+- Keep the workflow simple and fast for PR validation.
+- Upload artifacts for debugging failed runs.
+- Use headless mode in CI to avoid interactive browser issues.
+- Split test jobs by suite or project if the suite grows.
+
+7. Expected result
+------------------
+Once the repository is pushed, GitHub Actions will run the Playwright tests automatically. You can inspect the run status, logs, screenshots, and report artifacts from the Actions page.
+GitHub Actions Setup Guide for Playwright CI
+
+Project: Playwright Automation Suite
+
+This document explains how to set up GitHub Actions for a Playwright-based automation repository and how the workflow was configured during this session.
+
+1. What was created
+- A GitHub Actions workflow file at .github/workflows/playwright.yml
+- A CI-friendly Playwright config in playwright.config.js
+- A repository README in README.md
+- A local Git repository initialized and committed for GitHub upload
+
+2. GitHub Actions workflow overview
+The workflow runs automatically when code is pushed or a pull request is created on main or master. It also supports manual runs using workflow_dispatch.
+
+Workflow steps
+1. Checkout the repository
+2. Set up Node.js 20
+3. Install dependencies with npm ci
+4. Install Chromium for Playwright
+5. Run the Playwright tests in CI mode
+6. Upload the report and test-results artifacts
+
+3. Sample workflow file used in this session
+name: Playwright Tests
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --project=qa-chrome
+
+4. Commands used in this session
+npm ci
+npx playwright install --with-deps chromium
+npx playwright test --project=qa-chrome
+git init
+git add .
+git commit -m "Add Playwright tests and GitHub Actions workflow"
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+git push -u origin main
+
+5. How to push the repo to GitHub
+1. Create a new repository on GitHub.
+2. Add the remote URL and push your code.
+3. Open the Actions tab in GitHub.
+4. Confirm the workflow starts and completes.
+
+6. CI improvements and best practices
+- Use GitHub Secrets for credentials and environment values.
+- Keep the workflow simple and fast for PR validation.
+- Upload artifacts for debugging failed runs.
+- Use headless mode in CI to avoid interactive browser issues.
+- Split test jobs by suite or project if the suite grows.
+
+7. Expected result
+Once the repository is pushed, GitHub Actions will run the Playwright tests automatically. You can inspect the run status, logs, screenshots, and report artifacts from the Actions page.
