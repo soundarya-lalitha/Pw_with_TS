@@ -1,2 +1,0 @@
-username  hr.admin@gmail.com 
-password  Paswrd@123#

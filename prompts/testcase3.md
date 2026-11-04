@@ -1,16 +1,32 @@
 sample automation test case generation prompt
 
-I have automated the login page and my Account page of this below website https://courses.ultimateqa.com/account (login.spec.js and myaccount.spec.js)
-the corresponding page obejects are LoginPageObject.js and MyAccountPageObject.js
-Generate a complete Playwright test covering:
-navigate to google.com
-on the search bar type playwright tutorial
-select the first link https://playwright.dev/.
-Click Get Started button.
-Click Trace Viewer on the left hand side.
-Verify whether Trace viewer label appears.
-close the browser
-name of the script should be googleTest.js
-Follow the page objects i have created above LoginPageObject.js and MyAccountPageObject.js
-Use the same structure and locator style as my existing page objects above
-Refer my login.spec.js for scripts
+I have an API and i want to validate the response https://credit-api.ashysmoke-68387e15.westus.azurecontainerapps.io/v1/credit-reports
+The x-api-key value is RvyVPky/sT1FUrt+eIGjGH0et0WhO0LE559pbEY19TY=
+I would want the API request body to be populated from a csv file
+The request body is below
+{
+    "callerId": "leadhouse-intake-web",
+     "callerRequestId": "prod-smoke-004",
+    "consumer": {
+        "firstName": "{{firstName}}",
+        "lastName": "{{lastName}}",
+        "dob": "{{dob}}",
+        "ssn": "{{ssn}}",
+        "currentAddress": {
+            "line1": "{{line1}}",
+            "city": "{{city}}",
+            "state": "{{state}}",
+            "zipCode": "{{zipcode}}"
+        }
+
+        
+    },
+    "permissiblePurpose": "3F",
+     "addOns": ["BASE_PROFILE"],
+    "includeProductCodes": true
+}
+
+Above {firstName} etc should be read from a csv file with the same headers.
+i want the response to be displayed
+
+name of the script should be FirstAPI.tx

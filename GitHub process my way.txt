@@ -1,0 +1,34 @@
+GitHub process my way
+
+1)install git
+check git version
+git --version
+
+2)configure username and pwd
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+3)set up authentication
+GitHub no longer accepts your account password for git push. The easiest option is the GitHub CLI:
+# install from https://cli.github.com, then:
+gh auth login
+
+Choose GitHub.com → HTTPS → Login with a web browser and follow the prompts. It also lets Git push to your repos. (The alternatives are SSH keys or a personal access token. The CLI is simpler.
+
+4)Prepare gitignore
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/allure-results/
+/allure-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Environment files
+.env
+.env.*
+!.env.example
+

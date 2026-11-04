@@ -6,9 +6,10 @@ description: Describe when these instructions should be loaded by the agent base
 <!-- Tip: Use /create-instructions in chat to generate content with agent assistance -->
 
 # Copilot Instructions for Playwright Tests
--use javascript for playwright tests
+-use typescript for playwright tests
 - Always use 'async/await` syntax
-- Use `page.getByRole`, `page.getByLabel`, `page.getByTestId` locators (in that priority order)
+- Use `page.getByRole`, `page.getByLabel`, `page.getByTestId`,`getByText`locators (in that priority order).Never use XPath or long CSS chains.
+-Use web-first assertions (`await expect(locator).toBeVisible()`). Never use `waitForTimeout` or fixed sleeps.
 - Wrap tests in `test.describe` blocks with clear feature names
 - Each test must have at least one `expect` assertion
 - Use `test.beforeEach` for navigation and setup

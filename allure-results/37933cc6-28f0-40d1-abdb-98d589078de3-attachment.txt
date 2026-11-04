@@ -1,7 +1,0 @@
-✓ Successfully navigated to Google
-✓ Searched for "playwright tutorial"
-✓ Clicked on Playwright.dev link from search results
-✓ Clicked Get Started button
-✓ Clicked Trace Viewer link
-✓ Trace Viewer label is visible on the page
-✓ Browser closed successfully

@@ -1,2 +1,0 @@
-✓ Completed full navigation flow successfully
-✓ Browser closed successfully

@@ -59,6 +59,7 @@ https://github.com/soundarya-lalitha/PlayWrightPOC_JS.git
 
 git push -u origin main
 
+git push origin master
 5. How to push the repo to GitHub
 ---------------------------------
 1. Create a new repository on GitHub.

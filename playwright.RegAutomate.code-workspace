@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"js/ts.tsdk.path": "Use Workspace Version (7.0.2)"
+	}
+}

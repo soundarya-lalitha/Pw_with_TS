@@ -1,6 +1,0 @@
-Test Case ID: ACC001
-Username: soundarya.lalithac@gmail.com
-Password: Paswrd@123#
-Company: Employee Loan Solutions
-Professional Title: Ms.
-Timezone: Hongkong
