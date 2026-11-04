@@ -32,3 +32,29 @@ node_modules/
 .env.*
 !.env.example
 
+5)git pushes
+git init--- i think only first time
+
+git add .
+git commit -m "Add Playwright tests and GitHub Actions workflow"
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
+
+https://github.com/soundarya-lalitha/PlayWrightPOC_JS.git---this is sample needs update
+
+if orign already exists
+
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+git remote set-url origin https://github.com/soundarya-lalitha/Pw_with_TS.git
+
+git push origin main
+
+6.) Add the workflow----this is done manually before git push
+bash
+mkdir -p .github/workflows
+cp /path/to/playwright.yml .github/workflows/playwright.yml
+git add .github/workflows/playwright.yml
+git commit -m "Add Playwright CI workflow"
+git push
+
+7)

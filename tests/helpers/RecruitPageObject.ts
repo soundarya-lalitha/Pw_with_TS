@@ -93,7 +93,7 @@ export class RecruitPageObject {
     await this.newProspectButton.click();
     await expect(this.firstNameInput).toBeVisible();
   }
-
+//Fill prospect form
   async fillInitialProspectDetails(prospect: RecruitProspectDetails): Promise<void> {
     await this.firstNameInput.fill(prospect.firstName);
     await this.lastNameInput.fill(prospect.lastName);
@@ -129,6 +129,8 @@ export class RecruitPageObject {
     await this.logoutButton.click();
   }
 
+
+//Check if prospect is converted to recruit
   async isProspectConvertedToRecruit(recruit: ConvertRecruitDetails): Promise<boolean> {
     await this.searchByNameInput.fill(recruit.searchByName);
     await this.page.waitForTimeout(8000);
@@ -136,7 +138,7 @@ export class RecruitPageObject {
     
   }
 
-
+//check if prospect is created
   async isProspectCreated(prospect: RecruitProspectDetails): Promise<boolean> {
     await this.searchByNameInput.fill(prospect.searchByName);
     await this.page.waitForTimeout(8000);
