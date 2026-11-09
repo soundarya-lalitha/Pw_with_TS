@@ -42,7 +42,7 @@ for (const data of conversionTestData) {
         ein: String(data.Ein).trim(),
         stateToSponsor: String(data.State).trim(),
       };
-
+//if prospect is already converted to recruit, then no need to convert again. If not, then convert the prospect to recruit and verify the conversion.
       let isAlreadyRecruit = false;
       await allure.step(`Check whether prospect ${prospect.searchByName} is already a Recruit`, async () => {
         isAlreadyRecruit = await recruitPage.isProspectConvertedToRecruit(prospect);
