@@ -9,6 +9,8 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+Training/
+
 
 # Environment files
 .env

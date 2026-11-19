@@ -55,6 +55,8 @@ export default defineConfig({
         baseURL: process.env.APP_URL || 'https://onboarding-dev-lumin.vercel.app',
         browserName: 'chromium',
         headless: Boolean(process.env.CI),
+        viewport: { width: 1920, height: 1080 },
+
       },
     },
 
